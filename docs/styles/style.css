@@ -56,4 +56,35 @@ h5 {
   font-size: 1rem;
   margin: 0;
 }
+
+/* LAYOUT */
+
+.bio {
+  border-top: 1px solid lightgray;
+  padding-top: 1.5rem;
+}
+
+.bio__img {
+  height: 7.5rem;
+  border-radius: 100px;
+  float: left;
+  margin-right: 20px;
+}
+/* to hide and display colored guides for typo elements*/
+@media screen and (max-width: 900px) {
+  h1, h2, h3, h4, h5 {
+    background-color: pink;
+  }
+
+  p {
+    background-color: lightBlue;
+  }
+
+  li {
+    background-color: lightGreen;
+  }
+
+  span {
+    background-color: Orange;
+  }
 }
