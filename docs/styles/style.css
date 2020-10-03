@@ -5,7 +5,7 @@
 body {
   font-size: 16px;
   font-family: "Roboto", Arial, sans-serif;
-  line-height: 1.5; /* 24p x*/
+  line-height: 1.5; /* baseline height 24p x*/
 }
 
 p {
@@ -33,20 +33,25 @@ span {
 h1, h2, h3, h4, h5 {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  line-height: 3rem;
 }
 
 h1 {
   font-size: 3rem;
-  line-height: 1;
+  padding-top: 0.25rem;
+  padding-bottom: 1.25rem;
 }
 
 h2 {
   font-size: 2.5rem;
+  padding-top: 0.4375rem;
+  padding-bottom: 1.0625rem;
 }
 
 h3 {
   font-size: 2rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.875rem;
 }
 
 h4 {
