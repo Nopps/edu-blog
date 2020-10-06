@@ -1,65 +1,73 @@
-* {
-  margin: 0;
+:root {
+  --typo-scale: 1.2;
+  font-size: 15px;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.5;
 }
 
-body {
-  font-size: 16px;
-  font-family: "Roboto", Arial, sans-serif;
-  line-height: 1.5; /* baseline height 24p x*/
+@media screen and (min-width: 481px) {
+  :root {
+    font-size: 16px;
+    --typo-scale: 1.25;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    font-size: 17px;
+    --typo-scale: 1.333;
+  }
 }
 
 p {
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5em;
 }
 
-p.lead {
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+.lead {
+  font-size: calc(var(--typo-scale) * 1rem);
 }
 
-li {
-  font-size: 1rem;
-}
-
-ul, ol {
-  margin-bottom: 1.5rem;
-}
-
-span {
-  font-size: 1rem;
-}
-
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 700;
-  line-height: 3rem;
+  line-height: 1.2;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
 }
 
 h1 {
-  font-size: 3rem;
-  padding-top: 0.25rem;
-  padding-bottom: 1.25rem;
+  font-size: calc(
+    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) *
+      var(--typo-scale) * var(--typo-scale) * 1rem
+  );
+  margin-top: 0;
+  margin-bottom: 0.8em;
 }
 
 h2 {
-  font-size: 2.5rem;
-  padding-top: 0.4375rem;
-  padding-bottom: 1.0625rem;
+  font-size: calc(
+    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) *
+      var(--typo-scale) * 1rem
+  );
 }
 
 h3 {
-  font-size: 2rem;
-  padding-top: 0.625rem;
-  padding-bottom: 0.875rem;
+  font-size: calc(
+    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) * 1rem
+  );
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: calc(var(--typo-scale) * var(--typo-scale) * 1rem);
 }
 h5 {
-  font-size: 1rem;
-  margin: 0;
+  font-size: calc(var(--typo-scale) * 1rem);
 }
 
 /* LAYOUT */
@@ -71,25 +79,7 @@ h5 {
 
 .bio__img {
   height: 7.5rem;
-  border-radius: 100px;
+  border-radius: 50%;
   float: left;
-  margin-right: 20px;
-}
-/* to hide and display colored guides for typo elements*/
-@media screen and (max-width: 900px) {
-  h1, h2, h3, h4, h5 {
-    background-color: pink;
-  }
-
-  p {
-    background-color: lightBlue;
-  }
-
-  li {
-    background-color: lightGreen;
-  }
-
-  span {
-    background-color: Orange;
-  }
+  margin-right: 1rem;
 }
