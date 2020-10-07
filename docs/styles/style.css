@@ -1,0 +1,85 @@
+:root {
+  --typo-scale: 1.2;
+  font-size: 15px;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 481px) {
+  :root {
+    font-size: 16px;
+    --typo-scale: 1.25;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    font-size: 17px;
+    --typo-scale: 1.333;
+  }
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.lead {
+  font-size: calc(var(--typo-scale) * 1rem);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1.2em;
+  margin-bottom: 0.3em;
+}
+
+h1 {
+  font-size: calc(
+    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) *
+      var(--typo-scale) * var(--typo-scale) * 1rem
+  );
+  margin-top: 0;
+  margin-bottom: 0.8em;
+}
+
+h2 {
+  font-size: calc(
+    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) *
+      var(--typo-scale) * 1rem
+  );
+}
+
+h3 {
+  font-size: calc(
+    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) * 1rem
+  );
+}
+
+h4 {
+  font-size: calc(var(--typo-scale) * var(--typo-scale) * 1rem);
+}
+h5 {
+  font-size: calc(var(--typo-scale) * 1rem);
+}
+
+/* LAYOUT */
+
+.bio {
+  border-top: 1px solid lightgray;
+  padding-top: 1.5rem;
+}
+
+.bio__img {
+  height: 7.5rem;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1rem;
+}
