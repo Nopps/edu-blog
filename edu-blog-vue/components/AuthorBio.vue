@@ -1,9 +1,9 @@
 <template>
   <aside>
-    <div class="bio">
-      <img class="bio__img" :src="image" :alt="alt" />
+    <div class="author-bio">
+      <img class="author-bio__img" :src="image" :alt="alt" />
 
-      <div class="bio__text">
+      <div class="author-bio__text">
         <h5>
           <a
             :href="href"
@@ -13,8 +13,7 @@
           >
         </h5>
         <p>
-          Author bio – Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          {{ text }}
         </p>
       </div>
     </div>
@@ -29,6 +28,7 @@ export default {
     href: { type: String, default: '' },
     target: { type: String, default: '' },
     authorName: { type: String, default: '' },
+    text: { type: String, default: '' },
   },
 }
 </script>
@@ -39,29 +39,29 @@ aside {
   border-bottom: 1px solid lightgray;
 }
 
-.bio {
+.author-bio {
   display: grid;
   padding-top: 2rem;
   grid-template-rows: 50% 50%;
 }
 
 @media screen and (min-width: 481px) {
-  .bio {
+  .author-bio {
     grid-template-columns: auto auto;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .bio {
+  .author-bio {
     grid-template-columns: 20% 80%;
   }
 }
 
-.bio p {
+.author-author-bio p {
   margin: 0;
 }
 
-.bio__img {
+.author-bio__img {
   height: 7.5rem;
   border-radius: 50%;
   margin-right: 2rem;

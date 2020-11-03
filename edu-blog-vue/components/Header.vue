@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <img :src="image" :alt="alt" />
+  <header class="main-header">
+    <img class="main-header__img" :src="image" :alt="alt" />
   </header>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style>
-header img {
+.main-header__img {
   object-fit: cover;
   width: 100%;
   height: 10rem;
@@ -22,13 +22,13 @@ header img {
 }
 
 @media screen and (min-width: 481px) {
-  header img {
+  .main-header__img {
     height: 15rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  header img {
+  .main-header__img {
     height: 20rem;
   }
 }

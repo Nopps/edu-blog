@@ -1,5 +1,5 @@
 <template>
-  <span class="meta-tag"
+  <span class="tag"
     ><a :href="href">{{ text }}</a></span
   >
 </template>
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style>
-.meta-tag a {
+.tag a {
   box-shadow: none;
   color: #333333;
   font-size: 0.9rem;
@@ -23,7 +23,7 @@ export default {
   padding: 0.05rem 0.6rem 0.2rem 0.6rem;
 }
 
-.meta-tag a:hover {
+.tag a:hover {
   background-color: #5aabf4;
   box-shadow: inset 0 -3px 0 rgba(44, 49, 63, 0.15);
 }

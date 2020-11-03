@@ -61,9 +61,9 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
         officia <a href="">deserunt mollit</a> anim id est laborum.
       </p>
-      <Metatag text="Tag 1" href="#" />
-      <Metatag text="Tag 2" href="#" />
-      <Metatag text="Tag 3" href="#" />
+      <Tag text="Tag 1" href="#" />
+      <Tag text="Tag 2" href="#" />
+      <Tag text="Tag 3" href="#" />
     </article>
     <AuthorBio
       image="https://avatars2.githubusercontent.com/u/1894309?s=120&v=4"
@@ -71,6 +71,8 @@
       href="https://github.com/Nopps"
       target="_blank"
       authorName="Noora S."
+      text="Author bio – Ut enim ad minim veniam, quis nostrud exercitation
+      ullamco laboris nisi ut aliquip ex ea commodo consequat."
     />
     <Footer text="Copyright 2020 Noppe" />
   </div>
@@ -78,13 +80,13 @@
 
 <script>
 import Header from '~/components/Header.vue'
-import Metatag from '~/components/Metatag.vue'
+import Tag from '~/components/Tag.vue'
 import AuthorBio from '~/components/AuthorBio.vue'
 import Footer from '~/components/Footer.vue'
 export default {
   components: {
     Header,
-    Metatag,
+    Tag,
     AuthorBio,
     Footer,
   },
@@ -255,7 +257,7 @@ time {
 }
 
 article,
-.bio,
+.author-bio,
 footer {
   width: 90%;
   margin: 0 auto 2rem auto;
@@ -263,7 +265,7 @@ footer {
 
 @media screen and (min-width: 481px) {
   article,
-  .bio,
+  .author-bio,
   footer {
     width: 70%;
   }
@@ -271,7 +273,7 @@ footer {
 
 @media screen and (min-width: 1200px) {
   article,
-  .bio,
+  .author-bio,
   footer {
     max-width: 60rem;
   }
