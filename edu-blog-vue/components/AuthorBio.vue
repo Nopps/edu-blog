@@ -6,7 +6,7 @@
       <div class="author-bio__text">
         <h5>
           <a
-            :href="href"
+            :href="url"
             :target="target"
             :rel="target === '_blank' ? 'noopener noreferrer' : null"
             >{{ name }}</a
@@ -25,7 +25,7 @@ export default {
   props: {
     alt: { type: String, default: null },
     image: { type: String, default: '' },
-    href: { type: String, default: '' },
+    url: { type: String, default: '' },
     target: { type: String, default: '' },
     name: { type: String, default: '' },
     text: { type: String, default: '' },

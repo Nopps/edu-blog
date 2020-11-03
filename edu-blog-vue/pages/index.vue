@@ -5,10 +5,8 @@
       alt="Header image with letter tiles that says Read More"
     />
     <article>
-      <time pubdate datetime="2020-08-28" title="August 28th, 2020"
-        >28. August 2020</time
-      >
-      <h1>Blog Post Title h1</h1>
+      <time pubdate :datetime="date" :title="date">{{ date }}</time>
+      <h1>{{ title }}</h1>
       <p class="lead">
         Lead Paragraph – Lorem ipsum dolor sit amet, consectetur adipiscing
         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -61,14 +59,12 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
         officia <a href="">deserunt mollit</a> anim id est laborum.
       </p>
-      <Tag text="Tag 1" href="#" />
-      <Tag text="Tag 2" href="#" />
-      <Tag text="Tag 3" href="#" />
+      <Tag v-for="tag in tags" :key="tag.id" :text="tag.text" :href="tag.url" />
     </article>
     <AuthorBio
       image="https://avatars2.githubusercontent.com/u/1894309?s=120&v=4"
       alt="Author portrait"
-      href="https://github.com/Nopps"
+      url="https://github.com/Nopps"
       target="_blank"
       name="Noora S."
       text="Author bio – Ut enim ad minim veniam, quis nostrud exercitation
@@ -91,6 +87,36 @@ export default {
     Tag,
     AuthorBio,
     Footer,
+  },
+  data() {
+    return {
+      title: 'Blog Post Title h1',
+      date: '28. August 2020',
+      author: {
+        image: '',
+        alt: '',
+        url: '',
+        target: '',
+        name: '',
+      },
+      tags: [
+        {
+          id: '1',
+          text: 'Tag 1',
+          url: '/tag1.html',
+        },
+        {
+          id: '2',
+          text: 'Tag 2',
+          url: '/tag2.html',
+        },
+        {
+          id: '3',
+          text: 'Tag 3',
+          url: '/tag3.html',
+        },
+      ],
+    }
   },
 }
 </script>
