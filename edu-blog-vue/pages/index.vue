@@ -70,7 +70,7 @@
       alt="Author portrait"
       href="https://github.com/Nopps"
       target="_blank"
-      authorName="Noora S."
+      name="Noora S."
       text="Author bio – Ut enim ad minim veniam, quis nostrud exercitation
       ullamco laboris nisi ut aliquip ex ea commodo consequat."
     />
@@ -83,6 +83,8 @@ import Header from '~/components/Header.vue'
 import Tag from '~/components/Tag.vue'
 import AuthorBio from '~/components/AuthorBio.vue'
 import Footer from '~/components/Footer.vue'
+import '~/components/_global.css'
+
 export default {
   components: {
     Header,
@@ -92,190 +94,3 @@ export default {
   },
 }
 </script>
-
-<style>
-:root {
-  --typo-scale: 1.2;
-  font-size: 15px;
-  font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.5;
-}
-
-body {
-  margin: 0;
-}
-
-@media screen and (min-width: 481px) {
-  :root {
-    font-size: 16px;
-    --typo-scale: 1.25;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  :root {
-    font-size: 17px;
-    --typo-scale: 1.333;
-  }
-}
-
-p {
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 1.5em;
-}
-
-.lead {
-  font-size: calc(var(--typo-scale) * 1rem);
-}
-
-ul,
-ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 481px) {
-  ul,
-  ol {
-    padding-left: 2rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  ul,
-  ol {
-    padding-left: 2.4rem;
-  }
-}
-
-a {
-  display: inline-block;
-  color: #026bcb;
-  text-decoration: none;
-  -webkit-transition: color 130ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-  transition: color 130ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-  transition: color 130ms ease-in, box-shadow 130ms ease-in-out;
-  -webkit-box-shadow: inset 0 -2px 0 rgba(44, 49, 63, 0.3);
-  box-shadow: inset 0 -2px 0 rgba(44, 49, 63, 0.3);
-}
-
-a:hover {
-  color: #0255a2;
-  -webkit-box-shadow: inset 0 -9px 0 rgba(44, 49, 63, 0.15);
-  box-shadow: inset 0 -9px 0 rgba(44, 49, 63, 0.15);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: 'Poppins', Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-top: 1.2em;
-  margin-bottom: 0.3em;
-}
-
-h1 {
-  font-size: calc(
-    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) *
-      var(--typo-scale) * var(--typo-scale) * 1rem
-  );
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-
-h2 {
-  font-size: calc(
-    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) *
-      var(--typo-scale) * 1rem
-  );
-}
-
-h3 {
-  font-size: calc(
-    var(--typo-scale) * var(--typo-scale) * var(--typo-scale) * 1rem
-  );
-}
-
-h4 {
-  font-size: calc(var(--typo-scale) * var(--typo-scale) * 1rem);
-}
-h5 {
-  font-size: calc(var(--typo-scale) * 1rem);
-}
-
-@media screen and (min-width: 481px) {
-  .bio h5 {
-    margin-top: 0;
-  }
-}
-
-time {
-  border-bottom: 1px solid #dfdfdf;
-  display: block;
-  margin-bottom: 2rem;
-  padding-bottom: 0.2rem;
-  font-size: 0.9rem;
-  font-family: 'Poppins', Arial, sans-serif;
-  color: #646464;
-}
-
-/* LAYOUT */
-
-.article-col-container {
-  display: grid;
-  grid-template-rows: auto auto;
-}
-
-.article-col-container__col ol,
-.article-col-container__col ul {
-  margin-top: 0;
-}
-
-@media screen and (min-width: 481px) {
-  .article-col-container {
-    grid-template-rows: auto auto;
-  }
-  .article-col-container__col ol,
-  .article-col-container__col ul {
-    margin-top: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .article-col-container {
-    grid-template-columns: 50% 50%;
-  }
-
-  .article-col-container__col ol,
-  .article-col-container__col ul {
-    margin-top: 0;
-  }
-}
-
-article,
-.author-bio,
-footer {
-  width: 90%;
-  margin: 0 auto 2rem auto;
-}
-
-@media screen and (min-width: 481px) {
-  article,
-  .author-bio,
-  footer {
-    width: 70%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  article,
-  .author-bio,
-  footer {
-    max-width: 60rem;
-  }
-}
-</style>

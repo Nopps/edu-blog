@@ -9,7 +9,7 @@
             :href="href"
             :target="target"
             :rel="target === '_blank' ? 'noopener noreferrer' : null"
-            >{{ authorName }}</a
+            >{{ name }}</a
           >
         </h5>
         <p>
@@ -27,7 +27,7 @@ export default {
     image: { type: String, default: '' },
     href: { type: String, default: '' },
     target: { type: String, default: '' },
-    authorName: { type: String, default: '' },
+    name: { type: String, default: '' },
     text: { type: String, default: '' },
   },
 }
