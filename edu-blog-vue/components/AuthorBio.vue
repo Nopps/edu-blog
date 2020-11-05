@@ -2,7 +2,6 @@
   <aside>
     <div class="author-bio">
       <img class="author-bio__img" :src="image" :alt="alt" />
-
       <div class="author-bio__text">
         <h5>
           <a
@@ -57,7 +56,7 @@ aside {
   }
 }
 
-.author-author-bio p {
+.author-bio p {
   margin: 0;
 }
 
