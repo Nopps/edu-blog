@@ -11,7 +11,7 @@
             >{{ name }}</a
           >
         </h5>
-        <p>
+        <p class="author-bio__text">
           {{ text }}
         </p>
       </div>
@@ -56,7 +56,7 @@ aside {
   }
 }
 
-.author-bio p {
+.author-bio__text {
   margin: 0;
 }
 

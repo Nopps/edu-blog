@@ -1,35 +1,36 @@
 <template>
   <div class="container">
-    <Header
-      image="https://images.unsplash.com/photo-1546074177-ffdda98d214f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
-      alt="Header image with letter tiles that says Read More"
-    />
+    <Header :image="header.image" :alt="header.alt" />
     <article>
       <time pubdate :datetime="date" :title="date">{{ date }}</time>
       <h1>{{ title }}</h1>
       <p class="lead">
         {{ lead }}
       </p>
-      <div v-for="item in content" :key="item.id">
-        <p v-if="item.type === 'paragraph'">
+      <template v-for="item in content">
+        <p v-if="item.type === 'paragraph'" :key="item.id">
           {{ item.text }}
         </p>
-        <ul v-if="item.type === 'ul'">
+        <ul v-if="item.type === 'ul'" :key="item.id">
           <li v-for="li in item.li" :key="li">{{ li }}</li>
         </ul>
-        <ol v-if="item.type === 'ol'">
+        <ol v-if="item.type === 'ol'" :key="item.id">
           <li v-for="li in item.li" :key="li">{{ li }}</li>
         </ol>
-        <h2 v-if="item.type === 'heading2'">
+        <h2 v-if="item.type === 'heading2'" :key="item.id">
           {{ item.text }}
         </h2>
-        <h3 v-if="item.type === 'heading3'">
+        <h3 v-if="item.type === 'heading3'" :key="item.id">
           {{ item.text }}
         </h3>
-        <h4 v-if="item.type === 'heading4'">
+        <h4 v-if="item.type === 'heading4'" :key="item.id">
           {{ item.text }}
         </h4>
-        <div v-else-if="item.type === 'cols'" class="article-col-container">
+        <div
+          v-else-if="item.type === 'cols'"
+          :key="item.id"
+          class="article-col-container"
+        >
           <div
             v-for="col in item.col"
             :key="col"
@@ -43,7 +44,7 @@
             </ol>
           </div>
         </div>
-      </div>
+      </template>
       <Tag v-for="tag in tags" :key="tag.id" :text="tag.text" :href="tag.url" />
     </article>
     <AuthorBio
@@ -74,6 +75,11 @@ export default {
   },
   data() {
     return {
+      header: {
+        image:
+          'https://images.unsplash.com/photo-1546074177-ffdda98d214f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80',
+        alt: 'Header image with letter tiles that says Read More',
+      },
       title: 'Blog Post Title h1',
       date: '28. August 2020',
       lead:
