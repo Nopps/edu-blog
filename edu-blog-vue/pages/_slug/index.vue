@@ -1,9 +1,5 @@
 <template>
   <div>
-    <pre
-      >{{ JSON.stringify(post, null, 2) }}
-  </pre
-    >
     <div v-if="post" class="container">
       <Header :image="post.header.image" :alt="post.header.alt" />
       <article>
@@ -86,18 +82,15 @@ export default {
     AuthorBio,
     Footer,
   },
-  fetch({ params, redirect }) {
-    console.log('test', params.slug)
-    if (params.slug === 'post1') {
-      console.log('test', BlogPost1)
+  fetch() {
+    if (this.$nuxt.context.params.slug === 'post1') {
       this.post = BlogPost1
-    } else if (params.slug === 'post2') {
+    } else if (this.$nuxt.context.params.slug === 'post2') {
       this.post = BlogPost2
     } else {
-      redirect(307, '/error')
+      this.$nuxt.context.redirect(307, '/error')
     }
   },
-  fetchOnServer: false,
   data() {
     return {
       post: null,
